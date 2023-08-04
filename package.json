@@ -1,0 +1,28 @@
+{
+  "name": "db2storeprocedure",
+  "version": "0.0.7",
+  "description": "Library for node js that allows executing stored procedure for DB2 (Inspired by sqlstoreprocedure)",
+  "main": "./lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urienix/db2storeprocedure.git"
+  },
+  "keywords": [
+    "nodejs",
+    "db2",
+    "ibm_db",
+    "storeprocedure"
+  ],
+  "author": "urienix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urienix/db2storeprocedure/issues"
+  },
+  "homepage": "https://github.com/urienix/db2storeprocedure#readme",
+  "dependencies": {
+    "ibm_db": "^3.2.1"
+  }
+}
