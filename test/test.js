@@ -12,6 +12,7 @@ async function showAccountsWithAsyncAwait(){
     console.log(accounts);
 }
 
+// checking procedure without input parameters
 function showAccountsWithPromise(){
     pool.exec('MYSCHEMA.GETACCOUNTS')
     .then(accounts => {
@@ -22,6 +23,30 @@ function showAccountsWithPromise(){
     });
 }
 
-//showAccountsWithPromise();
-//showAccountsWithAsyncAwait();
+// checking input parameters
+function showAccountsByIdWithPromise(){
+    pool.exec('TRANSMON.GETACCOUNTBYID', { AccID: 1 , userName: 'user1s'})
+    .then(accounts => {
+        console.log(accounts);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+// checking error return
+function generateError(){
+    pool.exec('TRANSMON.GENERATEERROR')
+    .then(accounts => {
+        console.log(accounts);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+// showAccountsWithPromise();
+// showAccountsWithAsyncAwait();
+// generateError();
+
 pool.close();
